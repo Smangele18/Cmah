@@ -7,32 +7,27 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-
 </head>
-<body class="bg-secondary">
+<body>
 <jsp:include page="/WEB-INF/jsp/nav-bar.jsp"/>
 <div class="container-fluid">
-    <div class ="col-12" >
-
-
-        <div class="col-12" style="text-align: center">
-            <h1>Todo Items</h1>
-
+    <div class="row mt-4">
+        <div class="col-12">
+            <h3 class="bg-primary text-white p-2">Todo Items</h3>
         </div>
     </div>
-    <table width="800" align="center" style="text-align: center" border="6px solid black">
-
-        <tr class="table-dark">
-            <th scope="col"><label>..#..</label></th>
-            <th scope="col"><label>TITLE</label></th>
-            <th scope="col"><label>COMPLETED</label></th>
-            <th scope="col"><label>ACTION</label></th>
-
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"><label>#</label></th>
+            <th scope="col"><label>Title</label></th>
+            <th scope="col"><label>Completed</label></th>
+            <th scope="col"><label>Action</label></th>
         </tr>
-        <body style="color: pink">
+        </thead>
+        <tbody>
         <c:forEach var="todo" items="${todos}">
         <tr>
-
             <th scope="row">${todo.id}</th>
             <td>
                     ${todo.title}
@@ -42,11 +37,9 @@
             </td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                <a class="btn btn-dark" href="${pageContext.request.contextPath}/todo/edit/${todo.id}">Edit</a>
-                 <a class="btn btn-dark" href="${pageContext.request.contextPath}/todo/complete/${todo.id}">Complete</a>
-                  <a class="btn btn-dark" href="${pageContext.request.contextPath}/todo/delete/${todo.id}">Delete</a>
-
-
+                    <a class="btn btn-secondary" href="${pageContext.request.contextPath}/todo/edit/${todo.id}">Edit</a>
+                    <a class="btn btn-secondary" href="${pageContext.request.contextPath}/todo/complete/${todo.id}">Complete</a>
+                    <a class="btn btn-secondary" href="${pageContext.request.contextPath}/todo/delete/${todo.id}">Delete</a>
                 </div>
             </td>
         </tr>
