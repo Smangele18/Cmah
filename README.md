@@ -31,3 +31,7 @@ OR launch from IDE
 
 Then visit http://localhost:8080
 
+![](images/Capture.png)
+
+![](images/Capture1.png)
+
