@@ -23,7 +23,7 @@
                 <form:input class="form-control" path="title"></form:input>
             </div>
             <div class="row justify-content-end">
-                <form:errors class="alert text-danger " role="alert" path="title"></form:errors>
+                <form:errors class="alert text-light " role="alert" path="title"></form:errors>
             </div>
         </div>
         <div class="form-group offset-1 col-10">
@@ -32,7 +32,7 @@
                 <form:textarea class="form-control" path="description" cols="60" rows="10"></form:textarea>
             </div>
             <div class="row justify-content-end">
-                <form:errors class="alert text-danger" role="alert" path="description"></form:errors>
+                <form:errors class="alert text-light" role="alert" path="description"></form:errors>
             </div>
         </div>
         <div class="row offset-1 col-10">
